@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const SELECTOR = {
-    storyCard: '._4ikz',
+    storyCard: '[data-testid=fbfeed_story]',
     suggestedPost: 'span:contains(Suggested Post)',
     sponsoredLink: '.uiStreamSponsoredLink',
     trends: '#pagelet_trending_tags_and_topics',

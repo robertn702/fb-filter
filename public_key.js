@@ -1,0 +1,8 @@
+module.exports =
+  'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoPNVOhFRrRu3ZYqLNiN+' +
+  'tz98rPJ1DiVnXjvUcc0i0CeGhJEjSCC2gVTKOmn+Vt0tDsEoeBZlqQFXXn3IEKjm' +
+  'S3SOq6yw2MqwXyKVjhQPazWZVkP3CTGv+BsiRHMy2uLm1+HVEwKSKH6JSLzMriIx' +
+  'MY8PuGE5ZZOkegiVsr7JQRAew5V61Uz2NgYfdhuHvErhqcaUzl/tBn0QPLX4/Zki' +
+  'CzgooP+a7ndM8UmBXVGUrotb/43aYidQemXwQnbB93HVyciqxTnfx3123+i8s3E1' +
+  'hSqG0eWaLRemvY8RiqwRyw3APuHfttyGOFNPiJ21r4PjB/yCPQdXYvQAr7SDKmo7' +
+  '3QIDAQAB';

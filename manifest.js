@@ -1,4 +1,4 @@
-// const PUBLIC_KEY = require('./public_key');
+const PUBLIC_KEY = require('./public_key');
 
 const STYLES_DIR = 'styles/';
 const IMAGES_DIR = 'images/';
@@ -20,7 +20,7 @@ module.exports = {
     // 'default_icon': `${IMAGES_DIR}${BROWSER_ACTION_ICON}`,
     'default_title': 'Facebook Filter'
   },
-  // 'key': PUBLIC_KEY,
+  'key': PUBLIC_KEY,
   'permissions': [
     'activeTab',
   ],
@@ -29,7 +29,6 @@ module.exports = {
     'css': [`./${STYLES_DIR}content.css`],
     'js': [`./${SCRIPTS_DIR}content.js`],
     'matches': ['*://www.facebook.com/*']
-    // 'run_at': 'document_end'
   }],
   'web_accessible_resources': [
     '../node_modules/jquery/dist/jquery.min.js',

@@ -1,0 +1,47 @@
+{
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "classes": true,
+    "forOf": true,
+    "jsx": true,
+    "modules": true
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "$": true,
+    "ENV": true,
+    "_": true,
+    "chrome": true,
+    "refresh": true
+  },
+  "rules": {
+    "camelcase": 0,
+    "comma-dangle": 1,
+    "comma-spacing": [1, {"before": false, "after": true}],
+    "consistent-return": 0,
+    "eol-last": 0,
+    "eqeqeq": 1,
+    "key-spacing": 0,
+    "new-cap": 0,
+    "no-alert": 0,
+    "no-empty": 2,
+    "no-extra-semi": 1,
+    "no-multi-spaces": 0,
+    "no-shadow": 0,
+    "no-spaced-func": 2,
+    "no-trailing-spaces": 2,
+    "no-undef": 2,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": 2,
+    "no-unused-vars": 2,
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "space-infix-ops": 2,
+    "strict": 0,
+  }
+}

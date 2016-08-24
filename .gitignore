@@ -1,0 +1,13 @@
+*.crx
+*.log
+*.map
+*.orig
+*.pem
+*.zip
+
+.DS_Store
+.tmp/
+bower_components/
+dist/
+js_old/
+node_modules/

@@ -20,9 +20,11 @@ module.exports = {
     // 'default_icon': `${IMAGES_DIR}${BROWSER_ACTION_ICON}`,
     'default_title': 'Facebook Filter'
   },
+  'options_page': 'options.html',
   'key': PUBLIC_KEY,
   'permissions': [
     'activeTab',
+    'storage',
   ],
   'content_scripts': [{
     'all_frames': false,
@@ -32,10 +34,12 @@ module.exports = {
   }],
   'web_accessible_resources': [
     '../node_modules/jquery/dist/jquery.min.js',
-    // `${STYLES_DIR}popup.css`,
-    `${SCRIPTS_DIR}content.js`,
-    `${SCRIPTS_DIR}content.css`,
     // `${SCRIPTS_DIR}popup.js`,
+    // `${STYLES_DIR}popup.css`,
+    `${SCRIPTS_DIR}content.css`,
+    `${SCRIPTS_DIR}content.js`,
+    `${SCRIPTS_DIR}options.css`,
+    `${SCRIPTS_DIR}options.js`,
     `${IMAGES_DIR}*`
   ]
 };

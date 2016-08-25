@@ -29,7 +29,7 @@ gulp.task('build', () => {
   $.util.env.env = process.env.NODE_ENV || $.util.env.env || 'development';
   console.log('[gulpfile] $.util.env.env: ', $.util.env.env);
   runSequence([
-      // '_html',
+      '_html',
       // '_images',
       '_javascript',
       '_manifest',
@@ -43,7 +43,7 @@ gulp.task('pack', () => {
   runSequence(
     '_clean',
     [
-      // '_html',
+      '_html',
       // '_images',
       '_javascript',
       '_manifest',
@@ -157,7 +157,10 @@ gulp.task('_styles', ['_compile-sass']);
 gulp.task('_compile-sass', () => {
   const env = process.env.NODE_ENV || $.util.env.env || 'development';
   console.log('[gulpfile] env: ', env);
-  return gulp.src([SRC_STYLES_DIR + 'content/content.scss', SRC_STYLES_DIR + 'popup/popup.scss'])
+  return gulp.src([
+    SRC_STYLES_DIR + 'content/content.scss',
+    SRC_STYLES_DIR + 'options/options.scss'
+  ])
     .pipe($.plumber({
       errorHandler(err) {
         console.log(err);

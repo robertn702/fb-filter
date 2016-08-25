@@ -3,12 +3,14 @@ const webpack = require('webpack');
 const SRC_SCRIPTS_DIR = 'src/js/';
 // const BACKGROUND_DIR = SRC_SCRIPTS_DIR + 'background/';
 const CONTENT_DIR = SRC_SCRIPTS_DIR + 'content/';
+const OPTIONS_DIR = SRC_SCRIPTS_DIR + 'options/';
 // const POPUP_DIR = SRC_SCRIPTS_DIR + 'popup/';
 
 module.exports = {
   entry: {
     // background: ['babel-polyfill', BACKGROUND_DIR + 'background.js'],
     content: ['babel-polyfill', CONTENT_DIR + 'content.js'],
+    options: ['babel-polyfill', OPTIONS_DIR + 'options.js'],
     // popup: ['babel-polyfill', POPUP_DIR + 'popup.js']
   },
   node: {

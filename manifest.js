@@ -11,7 +11,7 @@ module.exports = {
   'manifest_version': 2,
   'name': 'Facebook Filter',
   'description': '',
-  'version': '1.0.0',
+  'version': '1.1.0',
   // 'icons': ICON_SIZES.reduce((result, num) => {
   //   result[num] = `${IMAGES_DIR}icon${num}.png`;
   //   return result;
@@ -20,11 +20,14 @@ module.exports = {
     // 'default_icon': `${IMAGES_DIR}${BROWSER_ACTION_ICON}`,
     'default_title': 'Facebook Filter'
   },
-  'options_page': 'options.html',
+  'options_ui': {
+    'page': 'options.html',
+    'chrome_style': true
+  },
   'key': PUBLIC_KEY,
   'permissions': [
-    'activeTab',
     'storage',
+    'activeTab',
   ],
   'content_scripts': [{
     'all_frames': false,

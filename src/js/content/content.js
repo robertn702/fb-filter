@@ -1,3 +1,6 @@
+import OPTION_KEYS from 'option_keys';
+import DEFAULT_OPTIONS from 'default_options';
+
 const SELECTOR = {
   comments: '.UFIComment',
   commentsLink: '._ipm:contains(Comment)',
@@ -11,14 +14,25 @@ const SELECTOR = {
 };
 
 $(document).ready(function() {
-  $(document).bind('DOMSubtreeModified', function() {
-    $(SELECTOR.trends).hide();
-    $(SELECTOR.sidebarAdTitle).closest(SELECTOR.sidebarSection).hide();
-    /* News Feed */
-    $(SELECTOR.suggestedPost).closest(SELECTOR.storyCard).hide();
-    $(SELECTOR.sponsoredLink).closest(SELECTOR.storyCard).hide();
-    $(SELECTOR.commentsLink).hide();
-    $(SELECTOR.comments).hide();
-    $(SELECTOR.replies).hide();
+  chrome.storage.sync.get((options) => {
+    options = Object.assign({}, DEFAULT_OPTIONS, options);
+    $(document).bind('DOMSubtreeModified', function() {
+      $(SELECTOR.sidebarAdTitle).closest(SELECTOR.sidebarSection).hide();
+      if (!options[OPTION_KEYS.TRENDS]) {
+        $(SELECTOR.trends).hide();
+      }
+      /* News Feed */
+      if (!options[OPTION_KEYS.SPONSORED]) {
+        $(SELECTOR.sponsoredLink).closest(SELECTOR.storyCard).hide();
+      }
+      if (!options[OPTION_KEYS.SUGGESTED]) {
+        $(SELECTOR.suggestedPost).closest(SELECTOR.storyCard).hide();
+      }
+      if (!options[OPTION_KEYS.COMMENTS]) {
+        $(SELECTOR.commentsLink).hide();
+        $(SELECTOR.comments).hide();
+        $(SELECTOR.replies).hide();
+      }
+    });
   });
 });

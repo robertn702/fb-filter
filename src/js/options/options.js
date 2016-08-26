@@ -1,4 +1,3 @@
-console.log('[options] here');
 import OPTION_KEYS from 'option_keys';
 import DEFAULT_OPTIONS from 'default_options';
 
@@ -16,7 +15,6 @@ const keyToId = _.reduce(idToKey, (result, value, key) => {
 
 const restoreOptions = () => {
   chrome.storage.sync.get((options) => {
-    console.log('[options] @restoreOptions -> options: ', options);
     const restoredOptions = Object.assign({}, DEFAULT_OPTIONS, options);
     _.forEach(restoredOptions, (shouldShow, key) => {
       document.getElementById(keyToId[key]).checked = shouldShow
@@ -27,11 +25,9 @@ const restoreOptions = () => {
 const createListeners = () => {
   _.forEach(idToKey, (optionKey, idSelector) => {
     $(`#${idSelector}`).change(function() {
-      console.log('[options] this.checked: ', this.checked);
       const updatedOptions = {
         [optionKey]: this.checked
       };
-      console.log('[options] updatedOptions: ', updatedOptions);
       chrome.storage.sync.set(updatedOptions, () => {
         console.log('[options] save successful');
       })

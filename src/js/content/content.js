@@ -17,6 +17,7 @@ $(document).ready(function() {
   chrome.storage.sync.get((options) => {
     options = Object.assign({}, DEFAULT_OPTIONS, options);
     $(document).bind('DOMSubtreeModified', function() {
+      /* Sidebar */
       $(SELECTOR.sidebarAdTitle).closest(SELECTOR.sidebarSection).hide();
       if (!options[OPTION_KEYS.TRENDS]) {
         $(SELECTOR.trends).hide();
